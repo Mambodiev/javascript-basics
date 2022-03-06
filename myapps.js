@@ -9,7 +9,7 @@ var car = {
         pistons:[{ maker:'chevrolet'}, {maker: 'general motor'}]
     },
     drive: function(){
-        return 'dive'
+        return 'drive'
     }
 };
 
