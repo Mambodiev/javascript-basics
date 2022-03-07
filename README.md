@@ -1,7 +1,6 @@
-# Javascript-basics Learning
-
+# JavaScript-basics 
 git add .
-git commit -m "Prototype Constructors"
+git commit -m "If Statements"
 git push -u origin main
 
 1:50
