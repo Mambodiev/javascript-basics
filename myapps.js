@@ -1,3 +1,16 @@
-var el = document.getElementById('style');
-el.style.cssText = 'background:green; color:white; text-align:center; height:150px';
-el.style.cssText += 'width:350px;';
+let elements = document.getElementsByName('cssProperty');
+let div = document.getElementById('modify');
+
+function set() 
+{
+
+    for ( let index = 0; index < elements.length; index++)
+
+    {
+        let cssProperty = elements [ index ].getAttribute('id');
+        let cssValue = elements [ index ].value;
+
+        div.style [ cssProperty] = cssValue;
+    }
+}
+document.getElementById( 'set' ).addEventListener( 'click',set );
