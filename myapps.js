@@ -1,8 +1,15 @@
-function Apple(x,y,color,score) {
-    this.x = x;
-    this.y = y;
+function Apple(color,weight) 
+{
     this.color = color;
-    this.score = score;
+    this.score = weight;
+}
+Apple.prototype = {
+    eat   :function () {
+        return 'eat the apple';
+    },
+    throw   :function () {
+        return 'throw the apple';
+    },
 }
 var apple1 = new Apple (10, 20, 'red', 200);
 var apple2 = new Apple (32, 15, 'green', 300);
