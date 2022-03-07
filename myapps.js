@@ -1,8 +1,10 @@
-var carsLeft = 0,
-    carsRight = 0,
-    greenMan = 'yes';
-
-if ( greenMan === 'yes')
+var classRegister = ['Lawrence', 'John', 'Jeff'];
+for ( var i = 0; i < classRegister.length; i++ )
 {
-    console.log('cross the road')
+    console.log( classRegister[i]);
+}
+
+for ( var i = classRegister.length -1; i >= 0; i-- )
+{
+    console.log( classRegister[i]);
 }
