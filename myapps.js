@@ -1,24 +1,20 @@
-
-var car = {
-    make : 'volvo',
-    speed : 1600,
-    engine : { 
-        size:4.0,
-        make:'bmw',
-        fuel:'diesel',
-        pistons:[{ maker:'chevrolet'}, {maker: 'general motor'}]
-    },
-    drive: function(){
-        return 'drive'
+var object = {
+    prop:this,
+    embed:
+    { 
+        embed: true,
+        method: function () {return this;}
     }
 };
-
 var array = [
-    'string', 
-    100,
-    ['embed', 200],
-    { car: 'ford'},
-    function(){
-       { return 'dive'; }
-    }
+    this,
+    function () { return this;}
 ];
+function global() {
+    console.log( 'from global', this);
+    function sub() { console.log( 'from sub', this)}
+    sub();
+}
+global.call(object);
+
+new global ();
